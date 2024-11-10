@@ -1,0 +1,131 @@
+.container {
+  width: 100%;
+  display: grid;
+  place-items: center;
+  padding-top: 2rem;
+  margin-top: 2rem;
+}
+
+.textSection {
+  width: 100%;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.headingText {
+  font-size: 2.5rem;
+  color: #a855f7;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.smallText {
+  font-size: 1rem;
+  color: #adb7be;
+}
+
+.line {
+  width: 60px;
+  height: 2px;
+  background-color: #a855f7;
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+.cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 62px;
+  justify-content: center;
+  padding: 2rem 0;
+  width: 200%;
+}
+
+.box {
+    z-index: 999;
+}
+
+.cardBx {
+    min-height: 440px;
+    width: 300px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #121212;
+    transition: 0.5s ease-in-out;
+    border-radius: 8px;
+    box-shadow: 0px 1px 1px 0px #ec4899 ;
+}
+
+.cardBx:hover {
+  background-color: #ec4899 ;
+  transition: 0.55s ease-in-out;
+}
+
+.cardBx::before,
+.cardBx::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  transition: 0.5s ease-in-out;
+}
+
+.cardBx::before {
+  inset: -10px 50px;
+  border-top: 4px solid #ec4899 ;
+  transform: skewY(12deg);
+  border-bottom: 4px solid #ec4899 ;
+}
+
+.cardBx:hover::before {
+  inset: -10px 40px;
+  transform: skewY(0deg);
+}
+
+.cardBx::after {
+  inset: 60px -10px #ec4899 ;
+  transform: skew(12deg);
+  border-right: 4px solid #ec4899 ;
+}
+
+.cardBx:hover::after {
+  inset: 40px -10px;
+  transform: skew(0deg);
+}
+
+.cardData {
+  text-align: center;
+  padding: 1rem;
+}
+
+.cardIcon {
+  font-size: 3rem;
+  color: #a855f7;
+  margin-bottom: 1rem;
+  transition: all 0.4s;
+}
+
+.cardBx:hover > .cardData .cardIcon,
+.cardBx:active > .cardData .cardIcon{
+    color: #fff
+}
+
+.cardContent h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.cardContent p {
+  font-size: 0.9rem;
+  color: #adb7be;
+  line-height: 1.5;
+}
+
+/* servicesSection.module.css */
+.serviceCard {
+  background-color: #2d2d2d;
+  border-radius: 10px;
+  padding: 20px;
+}
